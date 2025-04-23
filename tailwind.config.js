@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        chewy: ['Chewy', 'cursive'],
+        fredoka: ['Fredoka', 'sans-serif'],
+      }
+    }
   },
   plugins: [],
 }

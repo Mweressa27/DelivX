@@ -1,0 +1,31 @@
+{
+    "user": {
+      "id": 1,
+      "username": "Esther",
+      "email": "esther@gmail.com",
+      "password": "password"
+    },
+    "restaurant": {
+      "id": 1,
+      "name": "Mama's Kitchen",
+      "image": "url",
+      "location": "SoHo",
+      "cuisine": "African",
+      "rating": "4.5"
+    },
+    "foods": {
+        "id": 1,
+        "restaurantId": 1,
+        "name": "chapati",
+        "price": 300,
+        "description": "Soft chapati",
+        "category": "main"
+    },
+    "cart": {
+        "id": 1,
+        "userId": 1,
+        "foodId": 1,
+        "quantity":2
+    }
+  }
+  
