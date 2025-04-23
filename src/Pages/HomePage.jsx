@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from React Router
 import Footer from '../Components/Footer';
 
 function HomePage() {
@@ -26,8 +27,18 @@ function HomePage() {
             </h1>
           </div>
           <nav className="space-x-4">
-            <button className="px-5 py-2 rounded bg-[#D32F2F] hover:bg-[#E0E0E0] text-white font-medium transition">Sign Up</button>
-            <button className="px-5 py-2 rounded bg-gray-700 hover:bg-[#E0E0E0] text-white font-medium transition">Log In</button>
+            {/* Use Link for navigation to Sign Up page */}
+            <Link to="/signup">
+              <button className="px-5 py-2 rounded bg-[#D32F2F] hover:bg-[#E0E0E0] text-white font-medium transition">
+                Sign Up
+              </button>
+            </Link>
+            {/* Use Link for navigation to Login page */}
+            <Link to="/login">
+              <button className="px-5 py-2 rounded bg-gray-700 hover:bg-[#E0E0E0] text-white font-medium transition">
+                Log In
+              </button>
+            </Link>
           </nav>
         </header>
 
