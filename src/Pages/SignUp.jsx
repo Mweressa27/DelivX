@@ -1,6 +1,6 @@
 import React from 'react'
 
-function AdminPage() {
+function SignUp() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function AdminPage() {
   )
 }
 
-export default AdminPage
+export default SignUp

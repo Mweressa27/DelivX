@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
-import Header from './components/Header';
-import HomePage from './pages/HomePage';
-import RestaurantPage from './pages/RestaurantPage';
-import CheckoutPage from './pages/CheckoutPage';
-import PartnerPage from './pages/PartnerPage';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
+import NavBar from './Components/NavBar';
+import HomePage from './Pages/HomePage';
+import RestaurantPage from './Pages/RestaurantPage';
+import CheckoutPage from './Pages/Checkout';
+import PartnerPage from './Pages/PartnerPage';
+import Login from './Pages/Login';
+import Signup from './Pages/SignUp';
 
 const ProtectedRoute = ({ children }) => {
   const { user } = useAuth();
@@ -17,7 +17,7 @@ export default function App() {
   return (
     <AuthProvider>
       <Router>
-        <Header />
+        <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<Login />} />
