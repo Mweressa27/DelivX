@@ -1,15 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link from React Router
+import { Link } from 'react-router-dom'; 
 import Footer from '../Components/Footer';
 
 function HomePage() {
   return (
-    <div className="text-white font-sans">
-
-      {/* Hero Section with Curved Background */}
-      <section className="relative min-h-screen flex flex-col overflow-hidden">
-
-        {/* SVG Curved Background */}
+    <div className="text-white font-sans">      
+      <section className="relative min-h-screen flex flex-col overflow-hidden">        
         <div className="absolute top-0 left-0 w-full z-0">
           <svg viewBox="0 0 1440 320" className="w-full h-[300px]">
             <path
@@ -19,7 +15,7 @@ function HomePage() {
           </svg>
         </div>
 
-        {/* Header */}
+        
         <header className="relative z-10 flex justify-between items-center px-8 py-6 text-black">
           <div className="flex items-center space-x-2">
             <h1 className="text-4xl font-extrabold tracking-wide" style={{ fontFamily: "'Chewy', cursive" }}>
@@ -27,13 +23,13 @@ function HomePage() {
             </h1>
           </div>
           <nav className="space-x-4">
-            {/* Use Link for navigation to Sign Up page */}
+           
             <Link to="/signup">
               <button className="px-5 py-2 rounded bg-[#D32F2F] hover:bg-[#E0E0E0] text-white font-medium transition">
                 Sign Up
               </button>
             </Link>
-            {/* Use Link for navigation to Login page */}
+            
             <Link to="/login">
               <button className="px-5 py-2 rounded bg-gray-700 hover:bg-[#E0E0E0] text-white font-medium transition">
                 Log In
@@ -42,7 +38,7 @@ function HomePage() {
           </nav>
         </header>
 
-        {/* Hero Content */}
+        
         <div className="relative z-10 flex-grow flex flex-col justify-center items-center px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black">Hungry or Craving Something?</h2>
           <p className="text-lg md:text-xl max-w-xl mx-auto mb-12 text-black">
@@ -73,8 +69,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* How it Works Section */}
+      
       <section className="text-center py-16 bg-white text-black">
         <h2 className="text-3xl font-bold mb-10">How DelivX Works</h2>
         <div className="flex justify-around flex-wrap gap-8 px-6">
@@ -96,7 +91,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+     
       <section className="bg-gray-100 py-16 text-black text-center">
         <h2 className="text-3xl font-bold mb-10">Loved by Foodies Everywhere</h2>
         <div className="flex justify-center gap-8 flex-wrap px-6">
@@ -111,7 +106,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* App Download Section */}
+      
       <section className="text-center py-16 px-6 bg-white text-black">
         <h2 className="text-3xl font-bold mb-4">Order on the Go</h2>
         <p className="max-w-md mx-auto mb-6">
@@ -123,7 +118,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Newsletter Section */}
+      
       <section className="bg-white text-black py-12 text-center">
         <h2 className="text-2xl font-bold mb-4">Get Exclusive Deals</h2>
         <p className="mb-4">Join our newsletter for food discounts and updates!</p>
@@ -137,7 +132,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
+    
       <Footer />
     </div>
   );

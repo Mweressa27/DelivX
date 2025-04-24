@@ -1,4 +1,3 @@
-// src/pages/Login.jsx
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useState } from 'react';
@@ -7,6 +6,8 @@ export default function Login() {
   const { login } = useAuth();
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,6 +24,22 @@ export default function Login() {
           placeholder="Enter your username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          className="px-4 py-2 border rounded w-full"
+          required
+        />
+        <input
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="px-4 py-2 border rounded w-full"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Enter your username"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
           className="px-4 py-2 border rounded w-full"
           required
         />
