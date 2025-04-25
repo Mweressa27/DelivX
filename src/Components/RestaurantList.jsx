@@ -3,23 +3,10 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { StarIcon, ClockIcon } from '@heroicons/react/24/solid';
 
-function RestaurantList() {
-
-  useEffect()
+function RestaurantList({ restaurants }) {  
   const [selectedCuisine, setSelectedCuisine] = useState('')
   const [searchQuery, setSearchQuery] = useState('')
-  const [restaurants, setRestaurants] = useState()
-
-  useEffect(() => {
-    fetch('http://localhost:4050/restaurants')
-    .then(res => res.json())
-    .then((json) => {
-      setRestaurants(json)
-    })
-    .catch((err) => {
-      console.log('Error fetching data:', err)
-    })
-  }, [])
+  
 
   const filteredRestaurants = restaurants.filter(restaurant => 
   (selectedCuisine === '' || restaurant.cuisine === selectedCuisine) &&
