@@ -77,7 +77,7 @@ function FoodCard({ food, onAddToCart }) {
 
         <button
           onClick={() => onAddToCart({ ...food, quantity })}
-          className="w-full bg-[#4CAF50] hover:bg-[#FF6F00] text-white py-3 rounded-lg transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-2"
+          className="w-full bg-[#4CAF50] text-white py-3 rounded-lg transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-2"
         >
           <span>Add to Cart</span>
           <span className="text-sm bg-[#4CAF50] px-2 py-0.5 rounded">

@@ -118,7 +118,7 @@ function Sidebar({ isOpen, toggleSidebar, cart = [], updateQuantity, removeItem,
             </div>
             <button
               onClick={handlePlaceOrder}
-              className="w-full bg-indigo-600 text-white py-3 rounded-full mt-6"
+              className="w-full bg-[#4CAF50] text-white py-3 rounded-full mt-6"
             >
               Place Order
             </button>
