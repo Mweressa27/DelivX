@@ -7,7 +7,7 @@ function FoodCard({ food, onAddToCart }) {
 
   return (
     <div
-      className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:-translate-y-1"
+      className="bg-[#FFF8E1] rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:-translate-y-1"
    
     >
       <div className="relative">
@@ -58,7 +58,7 @@ function FoodCard({ food, onAddToCart }) {
               </span>
             )}
           </div>
-          <div className="flex items-center gap-2 bg-gray-100 dark:bg-gray-700 rounded-lg p-1">
+          <div className="flex items-center gap-2 bg-[#D32F2F] rounded-lg p-1">
             <button 
               onClick={() => setQuantity(Math.max(1, quantity - 1))}
               className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600"
@@ -77,10 +77,10 @@ function FoodCard({ food, onAddToCart }) {
 
         <button
           onClick={() => onAddToCart({ ...food, quantity })}
-          className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-lg transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-2"
+          className="w-full bg-[#4CAF50] hover:bg-[#FF6F00] text-white py-3 rounded-lg transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-2"
         >
           <span>Add to Cart</span>
-          <span className="text-sm bg-indigo-700 px-2 py-0.5 rounded">
+          <span className="text-sm bg-[#4CAF50] px-2 py-0.5 rounded">
             ${(food.price * quantity).toFixed(2)}
           </span>
         </button>

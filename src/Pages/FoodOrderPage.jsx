@@ -3,12 +3,8 @@ import { useParams, Link } from 'react-router-dom';
 import { toast } from 'sonner';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaStar, FaShoppingCart, FaArrowLeft } from 'react-icons/fa';
-import FoodCard from '../components/FoodCard';
-import Sidebar from '../components/Sidebar';
-
-
-const categories = ['All', 'Appetizers', 'Main Course', 'Desserts', 'Beverages'];
-
+import FoodCard from '../Components/FoodCard';
+import Sidebar from '../Components/SideBar';
 
 function FoodOrderPage() {
 const [restaurants, setRestaurants] = useState([]);
@@ -21,13 +17,11 @@ useEffect(() => {
       .catch((err) => {
         console.log('Error fetching data:', err);
       });
-  }, []);
+  }, []); 
 
   const { id } = useParams();
   const [cart, setCart] = useState([]);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState('All');
-  const categoriesRef = useRef(null);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);  
   const restaurant = restaurants.find(r => r.id === parseInt(id));
 
   const addToCart = (item) => {
@@ -91,19 +85,19 @@ useEffect(() => {
 
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-[#E0E0E0]">
       
-        <title>{restaurant.name} | Restaurant | Bee Food - Delivery</title>
+        {/* <title>{restaurant.name} | Restaurant | DelivX Food - Delivery</title>
         <meta
           name="description"
           content={`Bringing delicious food right to your doorstep. Order delicious ${restaurant.cuisine} from ${restaurant.name}. ${restaurant.description}`}
         />
-        <meta name="keywords" content="Restaurant, food delivery, Bee Food" />
-        <link rel="canonical" href={`https://www.beefood.netlify.app/restaurant/${id}`} />
+        <meta name="keywords" content="Restaurant, food delivery, DelivX Food" />
+        <link rel="canonical" href={`https://www.DelivXfood.netlify.app/restaurant/${id}`} /> */}
       
       
       <div className='sticky top-0 z-20 w-10'>
-      <Link to={`/`} className="block">
+      <Link to={`/restaurants`} className="block">
         <button className='flex items-center gap-2 p-4 text-center'>
           
           <FaArrowLeft className="w-6 h-6" />
@@ -134,29 +128,7 @@ useEffect(() => {
         </div>
       </div>
 
-      <div className="sticky top-0 pb-4 pt-2 bg-white dark:bg-gray-800 z-10 shadow-md">
-        <div className="relative max-w-7xl mx-auto px-4">
-          <div 
-            ref={categoriesRef}
-            className="gap-4 py-4 text-center justify-center  md:flex-wrap "
-          >
-            {categories.map(category => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`px-4 py-2 m-1 rounded-full whitespace-nowrap transition-colors
-                  ${activeCategory === category 
-                    ? 'bg-indigo-600 text-white '
-                    : 'bg-gray-100 dark:bg-gray-700 hover:bg-gray-200'
-                  }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-
+      
       <div className="max-w-7xl mt-4 mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {restaurant.menu.map((item) => (

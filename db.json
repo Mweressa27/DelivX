@@ -1,4 +1,4 @@
-{  
+{
   "restaurants": [
     {
       "id": 1,
@@ -196,7 +196,7 @@
       "cuisine": "Chinese",
       "rating": 4.1,
       "deliveryTime": 50,
-      "image": "https://scontent.fdac20-1.fna.fbcdn.net/v/t39.30808-6/408111806_653335413627820_2168175688825248654_n.jpg",
+      "image": "https://d3486jq6shjn6l.cloudfront.net/uploads/vendors/8319f688-b774-11e8-9f81-068a338a98ba/Saladstop-Catering-menu-Search_Banner-web.jpg",
       "menu": [
         {
           "id": 1,
@@ -290,7 +290,7 @@
       "id": 10,
       "name": "Salad Stop",
       "cuisine": "Healthy",
-      "rating": 4.0,
+      "rating": 4,
       "deliveryTime": 15,
       "image": "https://d3486jq6shjn6l.cloudfront.net/uploads/vendors/8319f688-b774-11e8-9f81-068a338a98ba/Saladstop-Catering-menu-Search_Banner-web.jpg",
       "menu": [
@@ -321,11 +321,15 @@
       "id": 11,
       "name": "Mahmud's Delight",
       "cuisine": "Healthy",
-      "rating": 5.0,
+      "rating": 5,
       "deliveryTime": 12,
       "priceRange": "$$",
-      "tags": ["Organic", "Vegan-Friendly", "Gluten-Free"],
-      "image": "https://png.pngtree.com/png-clipart/20210620/original/pngtree-pink-fruit-tea-restaurant-food-template-png-image_6436887.png",
+      "tags": [
+        "Organic",
+        "Vegan-Friendly",
+        "Gluten-Free"
+      ],
+      "image": "https://png.pngtree.com/png-clipart/20210620/original/pngtree-pink-fruit-tea-restaurant-food-template-png-image_6436887.jpg",
       "menu": [
         {
           "id": 1,
@@ -341,5 +345,8 @@
         }
       ]
     }
+  ],
+  "partners": [
+    
   ]
 }

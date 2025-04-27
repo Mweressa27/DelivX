@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { Link } from 'react-router-dom';
-import { MagnifyingGlassIcon, MicrophoneIcon } from '@heroicons/react/24/outline';
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import Footer from '../Components/Footer';
 
 function RestaurantPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -71,13 +72,12 @@ function RestaurantPage() {
           <MagnifyingGlassIcon className="absolute left-4 w-6 h-6 text-gray-400" />
           <input
             type="text"
-            placeholder="Restaurants or cuisines..."
+            placeholder="Search Restaurants..."
             className="w-full pl-12 pr-4 py-4 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400 shadow-lg text-lg"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <button className="absolute right-4 p-2 hover:bg-yellow-100 rounded-full transition-colors">
-            <MicrophoneIcon className="w-5 h-5 text-gray-400" />
+          <button className="absolute right-4 p-2 hover:bg-yellow-100 rounded-full transition-colors">           
           </button>
         </div>
       </div>
@@ -89,7 +89,7 @@ function RestaurantPage() {
           {randomMenuItems.map((item) => (
             <div
               key={item.id}
-              className="group bg-white dark:bg-gray-800 rounded-lg shadow-md"
+              className="group bg-white rounded-lg shadow-md"
             >
               <Link to={`/restaurant/${item.restaurantId}`}>
                 <div className="relative">
@@ -156,7 +156,7 @@ function RestaurantPage() {
           {filteredRestaurants.slice(0, visibleRestaurants).map((restaurant) => (
             <div
               key={restaurant.id}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden"
+              className="bg-white rounded-xl shadow-lg overflow-hidden"
             >
               <Link to={`/restaurant/${restaurant.id}`} className="block">
                 <div className="relative h-48">
@@ -165,7 +165,7 @@ function RestaurantPage() {
                     alt={restaurant.name}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute top-4 right-4 bg-white dark:bg-gray-800 rounded-full px-3 py-1">
+                  <div className="absolute top-4 right-4 bg-white rounded-full px-3 py-1">
                     ⭐ {restaurant.rating}
                   </div>
                 </div>
@@ -176,7 +176,7 @@ function RestaurantPage() {
                     <span className="text-sm text-gray-500">
                       {restaurant.deliveryTime} mins
                     </span>
-                    <span className="text-indigo-600 dark:text-indigo-400">
+                    <span className="text-[#FFA726]">
                       View Menu →
                     </span>
                   </div>
@@ -191,14 +191,14 @@ function RestaurantPage() {
           <div className="text-center mt-8">
             <button
               onClick={loadMore}
-              className="bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition-colors"
+              className="bg-[#FFA726] text-black px-6 py-3 rounded-full hover:bg-indigo-700 transition-colors"
             >
               See More
             </button>
           </div>
         )}
       </section>
-      
+      <Footer /> 
     </div>
   );
 }

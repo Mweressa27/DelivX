@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Footer from '../Components/Footer';
 
 function PartnerPage() {
   const [formData, setFormData] = useState({
@@ -17,7 +20,7 @@ function PartnerPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch('http://localhost:3001/partners', {
+    fetch('http://localhost:4050/partners', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -26,7 +29,12 @@ function PartnerPage() {
     })
       .then(res => res.json())
       .then(data => {
-        alert('Thank you for partnering with us!');
+        toast.success('Submitted!', {
+          position: 'top-center',
+          autoClose: 3000,
+          hideProgressBar: false,
+        });        
+        
         setFormData({
           businessType: '',
           businessName: '',
@@ -39,9 +47,9 @@ function PartnerPage() {
       .catch(err => console.error('Error submitting form:', err));
   };
 
-  return (
-    <div className="bg-[#E0E0E0] min-h-screen py-10 px-4">
-      <div className="max-w-xl mx-auto bg-white p-8 rounded shadow">
+  return (    
+    <div className="bg-[#E0E0E0] min-h-screen py-10 px-4">        
+      <div className="max-w-xl mx-auto bg-white p-8 rounded shadow">  
         <h2 className="text-2xl font-bold text-[#FF6F00] mb-4">Partner with Us</h2>
         <p className="text-gray-700 mb-6">
           Join our platform as a restaurant, grocery store, beverage & dessert shop, or rider.
@@ -120,6 +128,8 @@ function PartnerPage() {
           </button>
         </form>
       </div>
+      <ToastContainer />
+      <Footer />     
     </div>
   );
 }
