@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import RestaurantList from '../Components/RestaurantList';
 import { useAuth } from '../context/AuthContext';
 import { Link } from 'react-router-dom';
 import { MagnifyingGlassIcon, MicrophoneIcon } from '@heroicons/react/24/outline';
