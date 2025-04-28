@@ -367,16 +367,6 @@
       "instructions": "l",
       "status": "Pending",
       "createdAt": "2025-04-28T02:29:54.336Z"
-    },
-    {
-      "id": "436e",
-      "orderId": "855424",
-      "name": "Esther Mweresa",
-      "address": "Pioneer",
-      "phone": "+254 112904925",
-      "instructions": "l",
-      "status": "Pending",
-      "createdAt": "2025-04-28T02:49:31.320Z"
     }
   ]
 }

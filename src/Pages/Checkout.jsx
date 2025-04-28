@@ -108,7 +108,7 @@ function Checkout() {
         />
         <button
           type="submit"
-          className="w-full bg-indigo-600 text-white p-3 rounded hover:bg-indigo-700 transition"
+          className="w-full bg-[#4CAF50] text-white p-3 rounded hover:bg-[#D32F2F] transition"
         >
           Submit Order
         </button>
