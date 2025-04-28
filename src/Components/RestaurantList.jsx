@@ -65,11 +65,11 @@ function RestaurantList({ restaurants }) {
           >
             <Link
               to={`/restaurant/${restaurant.id}`}
-              className="block h-full bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden"
+              className="block h-full bg-white rounded-xl shadow-md overflow-hidden"
             >
               <div className="p-4">
-                <h2 className="text-xl font-semibold mb-2 text-indigo-600 dark:text-indigo-400">{restaurant.name}</h2>
-                <p className="text-gray-600 dark:text-gray-400 mb-2">{restaurant.cuisine}</p>
+                <h2 className="text-xl font-semibold mb-2 text-indigo-600">{restaurant.name}</h2>
+                <p className="text-gray-600 mb-2">{restaurant.cuisine}</p>
                 <div className="flex items-center">
                   <StarIcon className="h-5 w-5 text-yellow-400 mr-1" />
                   <span>{restaurant.rating}</span>

@@ -35,14 +35,12 @@ useEffect(() => {
         );
       }
       return [...prevCart, { ...item, quantity: 1 }];
-    });
-    toast.success(`Added ${item.name} to cart`);
+    });    
     setIsSidebarOpen(true); 
   };
 
   const removeFromCart = (itemId) => {
-    setCart(prevCart => prevCart.filter(item => item.id !== itemId));
-    toast.success('Item removed from cart');
+    setCart(prevCart => prevCart.filter(item => item.id !== itemId));    
   };
 
   const updateQuantity = (itemId, quantity) => {
@@ -62,7 +60,7 @@ useEffect(() => {
       toast.error('Your cart is empty');
       return;
     }
-    // Order processing logic here
+    
     setCart([]);
     setIsSidebarOpen(false);
     toast.success('Order placed successfully!');
@@ -70,17 +68,11 @@ useEffect(() => {
 
   const toggleSidebar = () => {
     setIsSidebarOpen(prevState => !prevState); 
-  };
-
-  const scrollCategories = (direction) => {
-    if (categoriesRef.current) {
-      const scrollAmount = direction === 'left' ? -200 : 200;
-      categoriesRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  };
-
+  }; 
+ 
+  
   if (!restaurant) {
-    return <div>Restaurant not found</div>;
+    return <div className="text-center mt-20 text-red-500">Restaurant not found</div>;
   }
 
 

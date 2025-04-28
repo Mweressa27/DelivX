@@ -1,7 +1,7 @@
 {
   "restaurants": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Burger Palace",
       "cuisine": "Fast Food",
       "rating": 4.5,
@@ -46,7 +46,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Pasta Paradise",
       "cuisine": "Italian",
       "rating": 4.2,
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Sushi Sensation",
       "cuisine": "Japanese",
       "rating": 4.8,
@@ -136,7 +136,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Taco Town",
       "cuisine": "Mexican",
       "rating": 4.6,
@@ -160,7 +160,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Pizza Planet",
       "cuisine": "Italian",
       "rating": 4.4,
@@ -191,7 +191,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Wok World",
       "cuisine": "Chinese",
       "rating": 4.1,
@@ -222,7 +222,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Kebab Kingdom",
       "cuisine": "Turkish",
       "rating": 4.7,
@@ -239,7 +239,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Curry Corner",
       "cuisine": "Indian",
       "rating": 4.3,
@@ -263,7 +263,7 @@
       ]
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Bakery Boutique",
       "cuisine": "Bakery",
       "rating": 4.9,
@@ -287,7 +287,7 @@
       ]
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Salad Stop",
       "cuisine": "Healthy",
       "rating": 4,
@@ -318,7 +318,7 @@
       ]
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Mahmud's Delight",
       "cuisine": "Healthy",
       "rating": 5,
@@ -346,7 +346,17 @@
       ]
     }
   ],
-  "partners": [],
+  "partners": [
+    {
+      "id": "b59a",
+      "businessType": "rider",
+      "businessName": "John",
+      "contactPerson": "",
+      "email": "esther.mweresa@student.moringaschool.com",
+      "phone": "+254 112904925",
+      "location": "Ruiru"
+    }
+  ],
   "orders": [
     {
       "id": "0e9a",
