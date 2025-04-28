@@ -8,7 +8,7 @@ import PartnerPage from './Pages/PartnerPage';
 import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
 import FoodOrderPage from './Pages/FoodOrderPage';
-import OrderPage from './Pages/OrderPage';
+import Checkout from './Pages/Checkout'
 
 const ProtectedRoute = ({ children }) => {
   const { user } = useAuth();
@@ -26,7 +26,7 @@ export default function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/restaurants" element={<ProtectedRoute><RestaurantPage /></ProtectedRoute>} />        
           <Route path="/restaurant/:id" element={<ProtectedRoute><FoodOrderPage /></ProtectedRoute>} />
-          <Route path="/order/:id" element={<ProtectedRoute><OrderPage /></ProtectedRoute>} />
+          <Route path="/order/:id" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
           <Route path="/partner" element={<PartnerPage />} />
         </Routes>
       </Router>

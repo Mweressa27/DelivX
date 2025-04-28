@@ -27,7 +27,7 @@ function NavBar() {
                 className="hover:text-[#FF6F00] hover:font-bold transition-all duration-200"
               >
                 Make an order
-              </Link>              
+              </Link>                           
               <Link
                 to="/partner"
                 className="hover:text-[#FF6F00] hover:font-bold transition-all duration-200"

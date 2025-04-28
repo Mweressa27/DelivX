@@ -8,11 +8,11 @@ function Sidebar({ isOpen, toggleSidebar, cart = [], updateQuantity, removeItem,
   const deliveryFee = 2.99;
   const total = subtotal + deliveryFee;
 
-  const handlePlaceOrder = () => {
+   const handlePlaceOrder = () => {
     const orderId = Math.floor(Math.random() * 1000000);
     placeOrder();
     navigate(`/order/${orderId}`);
-  };
+  }; 
 
   useEffect(() => {
     if (isOpen) {
@@ -33,17 +33,17 @@ function Sidebar({ isOpen, toggleSidebar, cart = [], updateQuantity, removeItem,
       )}
 
       <div
-        className={`fixed right-0 top-0 h-screen w-[40vh] bg-white dark:bg-gray-800 shadow-2xl z-50  transform transition-transform duration-300 ${
+        className={`fixed right-0 top-0 h-screen w-[40vh] bg-white shadow-2xl z-50  transform transition-transform duration-300 ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         <div className="flex flex-col h-full">
           {/* Header */}
-          <div className="flex justify-between items-center p-6 border-b dark:border-gray-700">
+          <div className="flex justify-between items-center p-6 border-b">
             <h2 className="text-xl font-bold">Your Cart ({cart.length})</h2>
             <button
               onClick={toggleSidebar}
-              className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full"
+              className="p-2 hover:bg-gray-100 rounded-full"
             >
               <FaTimes className="w-6 h-6" />
             </button>
@@ -60,7 +60,7 @@ function Sidebar({ isOpen, toggleSidebar, cart = [], updateQuantity, removeItem,
                 {cart.map((item) => (
                   <div
                     key={item.id}
-                    className="flex gap-4 bg-gray-50 dark:bg-gray-700 p-4 rounded-xl"
+                    className="flex gap-4 bg-[#D32F2F] p-4 rounded-xl"
                   >
                     <img
                       src={item.image}
