@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import { Link } from 'react-router-dom'; 
-import Footer from '../Components/Footer';
+import Footer from '../Components/Footer'
 
 function HomePage() {
   return (
@@ -85,7 +85,7 @@ function HomePage() {
           </div>
           <div className="w-60">
             <h3 className="font-semibold text-lg">Enjoy the Feast</h3>
-            <p className="text-sm">Kick back and dig in — no dishes to wash!</p>
+            <p className="text-sm">Kick back and dig in!</p>
             <img src="./dinner.png" alt="" className="mx-auto mb-3 w-16" />
           </div>
         </div>
@@ -138,4 +138,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default HomePage

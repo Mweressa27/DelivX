@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import { Toaster, toast } from 'sonner';
 
@@ -12,13 +12,15 @@ function Checkout() {
     address: '',
     phone: '',
     instructions: '',
-  });
+  })
 
   useEffect(() => {
     if (isNaN(parseInt(id))) {
       setOrderError('Invalid order ID');
     }
-  }, [id]);
+  }, [id])  
+
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,8 +46,7 @@ function Checkout() {
         throw new Error('Failed to submit order');
       }
 
-      const data = await response.json();
-      console.log('Order submitted:', data);
+      const data = await response.json();      
       toast.success('Order placed successfully!');
       setFormData({
         name: '',
@@ -53,8 +54,7 @@ function Checkout() {
         phone: '',
         instructions: '',
       });
-    } catch (error) {
-      console.error('Error:', error);
+    } catch (error) {      
       setOrderError('Failed to place order. Try again.');
     }
   };

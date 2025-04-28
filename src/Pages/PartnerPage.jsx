@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import Footer from '../Components/Footer';
+import 'react-toastify/dist/ReactToastify.css'
+import Footer from '../Components/Footer'
 
 function PartnerPage() {
   const [formData, setFormData] = useState({
@@ -11,7 +11,7 @@ function PartnerPage() {
     email: '',
     phone: '',
     location: '',
-  });
+  })
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -42,7 +42,7 @@ function PartnerPage() {
           email: '',
           phone: '',
           location: '',
-        });
+        })
       })
       .catch(err => console.error('Error submitting form:', err));
   };
@@ -134,5 +134,5 @@ function PartnerPage() {
   );
 }
 
-export default PartnerPage;
+export default PartnerPage
 

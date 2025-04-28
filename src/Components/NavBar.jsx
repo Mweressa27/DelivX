@@ -4,13 +4,12 @@ import { useAuth } from '../context/AuthContext';
 function NavBar() {
   const { user, logout } = useAuth();
   const location = useLocation();
-
-  // Check if the current path is the homepage
+  
   const isHomePage = location.pathname === '/';
 
-  // If it's the homepage, don't render the navbar
+  
   if (isHomePage) {
-    return null; // Do not render anything for homepage
+    return null; 
   }
 
   return (

@@ -37,7 +37,7 @@ useEffect(() => {
       return [...prevCart, { ...item, quantity: 1 }];
     });
     toast.success(`Added ${item.name} to cart`);
-    setIsSidebarOpen(true); // Open sidebar when item is added to cart
+    setIsSidebarOpen(true); 
   };
 
   const removeFromCart = (itemId) => {
@@ -69,7 +69,7 @@ useEffect(() => {
   };
 
   const toggleSidebar = () => {
-    setIsSidebarOpen(prevState => !prevState); // Toggling the sidebar state
+    setIsSidebarOpen(prevState => !prevState); 
   };
 
   const scrollCategories = (direction) => {
@@ -85,17 +85,8 @@ useEffect(() => {
 
 
   return (
-    <div className="min-h-screen bg-[#E0E0E0]">
-      
-        {/* <title>{restaurant.name} | Restaurant | DelivX Food - Delivery</title>
-        <meta
-          name="description"
-          content={`Bringing delicious food right to your doorstep. Order delicious ${restaurant.cuisine} from ${restaurant.name}. ${restaurant.description}`}
-        />
-        <meta name="keywords" content="Restaurant, food delivery, DelivX Food" />
-        <link rel="canonical" href={`https://www.DelivXfood.netlify.app/restaurant/${id}`} /> */}
-      
-      
+    <div className="min-h-screen bg-[#E0E0E0]">  
+                
       <div className='sticky top-0 z-20 w-10'>
       <Link to={`/restaurants`} className="block">
         <button className='flex items-center gap-2 p-4 text-center'>

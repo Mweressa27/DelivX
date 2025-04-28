@@ -1,23 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { useAuth } from '../context/AuthContext';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'
+import { useAuth } from '../context/AuthContext'
+import { Link } from 'react-router-dom'
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
-import Footer from '../Components/Footer';
+import Footer from '../Components/Footer'
 
 function RestaurantPage() {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState('')
   const [cuisineFilter, setCuisineFilter] = useState('');
   const [ratingFilter, setRatingFilter] = useState('');
-  const [randomMenuItems, setRandomMenuItems] = useState([]);
-  const [visibleRestaurants, setVisibleRestaurants] = useState(6);
-
-  // ✅ Initialize as empty array to avoid reduce error
+  const [randomMenuItems, setRandomMenuItems] = useState([])
+  const [visibleRestaurants, setVisibleRestaurants] = useState(6); 
   const [restaurants, setRestaurants] = useState([]);
+  const { user } = useAuth()
 
-  const { user } = useAuth();
-
-  // ✅ Fetch restaurant data on mount
-  useEffect(() => {
+   useEffect(() => {
     fetch('http://localhost:4050/restaurants')
       .then((res) => res.json())
       .then((json) => {
@@ -27,8 +23,7 @@ function RestaurantPage() {
         console.log('Error fetching data:', err);
       });
   }, []);
-
-  // ✅ Generate random top dishes when restaurant data is ready
+  
   useEffect(() => {
     if (restaurants.length > 0) {
       const allItems = restaurants.reduce((items, restaurant) => {
@@ -44,8 +39,7 @@ function RestaurantPage() {
       setRandomMenuItems(shuffled.slice(0, 3));
     }
   }, [restaurants]);
-
-  // ✅ Filter restaurants based on search and selected filters
+  
   const filteredRestaurants = restaurants.filter((restaurant) =>
     restaurant.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
     (cuisineFilter === '' || restaurant.cuisine === cuisineFilter) &&
@@ -66,7 +60,7 @@ function RestaurantPage() {
         )}
       </header>
 
-      {/* Search Input */}
+      
       <div className="relative md:max-w-2xl mx-auto">
         <div className="relative flex items-center justify-center shadow-lg rounded-full overflow-hidden">
           <MagnifyingGlassIcon className="absolute left-4 w-6 h-6 text-gray-400" />
@@ -81,8 +75,7 @@ function RestaurantPage() {
           </button>
         </div>
       </div>
-
-      {/* Top Dishes */}
+      
       <section className="mt-12">
         <h2 className="text-3xl font-bold mb-6">Top Dishes</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -121,7 +114,6 @@ function RestaurantPage() {
         </div>
       </section>
 
-      {/* Filters */}
       <div className="flex justify-between mt-12">
         <h2 className="text-2xl font-bold pt-4">Top Restaurants</h2>
         <div className="max-w-7xl mx-auto px-4 mb-6">
@@ -149,8 +141,7 @@ function RestaurantPage() {
           </div>
         </div>
       </div>
-
-      {/* Restaurant Cards */}
+      
       <section>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredRestaurants.slice(0, visibleRestaurants).map((restaurant) => (
@@ -185,8 +176,7 @@ function RestaurantPage() {
             </div>
           ))}
         </div>
-
-        {/* Load More Button */}
+        
         {visibleRestaurants < filteredRestaurants.length && (
           <div className="text-center mt-8">
             <button

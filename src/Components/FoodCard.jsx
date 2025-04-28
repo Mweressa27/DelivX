@@ -89,4 +89,4 @@ function FoodCard({ food, onAddToCart }) {
   );
 }
 
-export default FoodCard;
+export default FoodCard

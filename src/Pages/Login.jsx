@@ -1,5 +1,5 @@
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
 import { useState } from 'react';
 
 export default function Login() {
@@ -13,7 +13,7 @@ export default function Login() {
     e.preventDefault();
     login(username);
     navigate('/restaurants');
-  };
+  }
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-gray-100">

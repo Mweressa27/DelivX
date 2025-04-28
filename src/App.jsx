@@ -3,11 +3,11 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import 'sonner'; 
 import NavBar from './Components/NavBar';
 import HomePage from './Pages/HomePage';
-import RestaurantPage from './Pages/RestaurantPage';
+import RestaurantPage from './Pages/RestaurantPage'
 import PartnerPage from './Pages/PartnerPage';
-import Login from './Pages/Login';
+import Login from './Pages/Login'
 import SignUp from './Pages/SignUp';
-import FoodOrderPage from './Pages/FoodOrderPage';
+import FoodOrderPage from './Pages/FoodOrderPage'
 import Checkout from './Pages/Checkout'
 
 const ProtectedRoute = ({ children }) => {

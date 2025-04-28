@@ -38,7 +38,7 @@ function Sidebar({ isOpen, toggleSidebar, cart = [], updateQuantity, removeItem,
         }`}
       >
         <div className="flex flex-col h-full">
-          {/* Header */}
+          
           <div className="flex justify-between items-center p-6 border-b">
             <h2 className="text-xl font-bold">Your Cart ({cart.length})</h2>
             <button
@@ -48,8 +48,7 @@ function Sidebar({ isOpen, toggleSidebar, cart = [], updateQuantity, removeItem,
               <FaTimes className="w-6 h-6" />
             </button>
           </div>
-
-          {/* Cart Items */}
+          
           <div className="flex-1 overflow-y-auto p-6">
             {cart.length === 0 ? (
               <div className="text-center py-8">
