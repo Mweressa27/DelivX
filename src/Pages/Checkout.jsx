@@ -113,6 +113,16 @@ function Checkout() {
           Submit Order
         </button>
       </form>
+      <div className="mt-8 border-t pt-4 text-sm text-gray-700">
+      <p className="font-semibold">Pay on Delivery</p>
+      <p>
+        <strong>M-Pesa Paybill:</strong> 88880<br />
+        <strong>Account Number:</strong> 555555555
+      </p>
+      <p className="mt-2 text-gray-500">
+        You will be asked to pay upon delivery.
+      </p>
+    </div>
     </div>
   );
 }
